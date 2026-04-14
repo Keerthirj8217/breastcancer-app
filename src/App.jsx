@@ -214,20 +214,18 @@ export default function App() {
     setAnalyzing(true);
 
     if (!ANTHROPIC_API_KEY) {
+      showToast('No API key configured. Showing placeholder result.', 'warning');
       await new Promise((resolve) => setTimeout(resolve, 1200));
       setResult({
-        classification: 'Sick',
-        confidence: 82,
-        spreadPercentage: 38,
-        stage: 'Stage II',
-        probabilities: { Sick: 82, Normal: 12, Unknown: 6 },
-        regions: [
-          { cx: 52, cy: 43, rx: 14, ry: 9, opacity: 0.46 },
-          { cx: 35, cy: 62, rx: 11, ry: 8, opacity: 0.32 }
-        ],
-        locationDescription: 'Upper outer quadrant of the left breast',
-        clinicalNotes: 'The scan shows a suspicious lesion pattern that should be reviewed by a specialist.',
-        recommendation: 'Schedule follow-up imaging and consult an oncologist for biopsy evaluation.'
+        classification: 'Unknown',
+        confidence: 50,
+        spreadPercentage: 0,
+        stage: 'Inconclusive',
+        probabilities: { Sick: 33, Normal: 33, Unknown: 34 },
+        regions: [],
+        locationDescription: 'No analysis performed because the API key is missing.',
+        clinicalNotes: 'Please configure ANTHROPIC_API_KEY to enable real image analysis.',
+        recommendation: 'Add your API key or use a valid backend to produce real predictions.'
       });
       setScreen('result');
       setAnalyzing(false);
