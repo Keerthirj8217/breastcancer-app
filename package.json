@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://<your-github-username>.github.io/oncoscan-app",
+  "homepage": "https://Keerthirj8217.github.io/oncoscan-app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
