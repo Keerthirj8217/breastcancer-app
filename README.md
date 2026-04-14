@@ -21,12 +21,12 @@ A minimal React + Vite app for the `breast_cancer_detection.jsx` component.
    - `git add .`
    - `git commit -m "Add deployment config"`
    - `git branch -M main`
-   - `git remote add origin https://github.com/<your-github-username>/oncoscan-app.git`
+   - `git remote add origin https://github.com/Keerthirj8217/oncoscan-app.git`
    - `git push -u origin main`
 3. Publish to GitHub Pages:
    - `npm run deploy`
 4. After deployment, your permanent URL will be:
-   - `https://<your-github-username>.github.io/oncoscan-app/`
+   - `https://Keerthirj8217.github.io/oncoscan-app/`
 
 ### Vercel
 
